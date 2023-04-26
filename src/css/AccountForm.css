@@ -1,0 +1,140 @@
+:root {
+    --main-color: #121418;
+    --secondary-color: #222222;
+    --text-color: rgba(236,236,241);
+    --button-color: #01C29A;
+    --link-color: #E7CE70;
+    --dark-text-color: #222222;
+    --random-color: rgba(170, 159, 9, 0.832);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+#login{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+}
+#login button{
+
+}
+#form101{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    color:var(--text-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 600px;
+    align-content: center;
+    height: auto;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#form101 h1 {
+    position: relative;
+    left:-20px;
+    width: 400px;
+    letter-spacing: 8px;
+    text-align: center;
+  
+    
+}
+.single-input{
+    margin: 6px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.single-input label{
+margin: 0px 0px;
+letter-spacing: 1px;
+height: inherit;
+
+}
+.icon-input{
+display: flex;
+align-items: center;
+background-color: var(--secondary-color);
+border-radius: 3px;
+border-width: 2px;
+border-color: var(--text-color);
+height: 50px;
+
+}
+
+.single-input input{
+    background-color: var(--secondary-color);
+    outline: none;
+    /* border: none; */
+    border-radius: 5px;
+    border-color: var(--text-color);
+    color: rgba(255,255,255,.8);
+    height: 25px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.icon-input input{
+    background-color: transparent;
+    border: none;
+    width: 90%;
+    padding-left: 10px;
+}
+
+.single-input input::placeholder{
+    font-size: 15px;
+    color: rgba(255,255,255,.5);
+ 
+}
+#submit2{
+    margin-top:8px;
+    border-radius: 5px;
+    border-color: rgba(255,255,255,1);
+    background-color: var(--secondary-color);
+    color: rgba(255,255,255,.8);
+    letter-spacing: 2px;
+    height: 35px;
+    border-width: 2px;
+    padding: 4px;
+    font-weight: bolder;
+    outline: none;
+    font-size: 20px;
+
+}
+#submit2:hover{
+    cursor:pointer;
+    transform: scaleY(1.1);
+    background-color: var(--button-color);
+    color: var(--dark-text-color);
+    border-color: black;
+    border-width: 1px;
+}
+.inserted-icon{
+    padding-left: 4px;
+}
+a{
+    color: var(--link-color);
+    margin: -10px 0px;
+    text-decoration: none;
+    font-style: italic;
+    font-size:15px;
+}
+#backArrow{
+    margin: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 60px ;
+    height: 40px;
+    font-size: 40px;
+}

@@ -1,0 +1,162 @@
+.task-card {
+    background-color: #1b1c1fba; /* Set background color */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    padding: 20px; /* Add some padding */
+    width: 200px; /* Set a maximum width */
+    height: 200px;
+    color: #FEFDFF;
+     margin: 2px;
+    /* width: 200px; */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 4px;
+    
+   
+    
+    
+    
+
+  }
+  .task-card:hover{
+    background-color: #222222;
+    position: relative;
+    transform: scale(1.1);
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(0.25turn,#e66465, #9198e5) 1;
+    z-index:3;
+
+  }
+  #task-card-dark{
+    background-color: #222222;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(0.25turn,#e66465, #9198e5) 1;
+    font-weight: 400;
+  }
+  
+  .task-card h2 {
+    margin-top: 0; /* Remove top margin */
+    
+    font-weight: 500;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-height: 20px;
+    
+  }
+  .task-card p{
+    height:10px;
+    font-size: 14px;
+  }
+  .task-card #description{
+    margin-bottom: 20px;
+    min-height: 70px;
+    height: 50%; /* Add some bottom margin */
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+  }
+  
+  .task-card button {
+    background-color:  #222222; /* Set background color */
+    border: none; /* Remove border */
+    color: #fff; /* Set text color */
+    padding: 10px 20px; /* Set padding */
+    border-radius: 3px; /* Round the corners */
+    cursor: pointer; /* Change cursor on hover */
+    margin: 0;
+  }
+
+  .task-almost{
+    color:#E7CE70;
+    font-weight:600;
+    letter-spacing: 1px;
+    
+  }
+  .task-almost:hover::after{
+    content:"-- due within 3 days";
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 0px;
+    font-weight: 200;
+    color: red;
+    background-color: #222222;
+    animation-duration: .5s;
+    animation-name: task-almost;
+    padding: auto;
+    display: flex;
+
+  }
+
+  @keyframes task-almost{
+    0%   {font-size:1px;color: white}
+    25%  {}
+    50%  {color:#E7CE70}
+    100% {}
+  }
+  .task-safe{
+    color:#01C29A;
+    font-weight:590;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+#card-delete{
+  width: 40%;
+  margin-left: auto;
+  background-color: #e33333;
+}
+.deleted{
+  display: none;
+}
+
+#task-card-completed{
+  margin: 0 auto;
+
+}
+/* Edit modal */
+
+.edit-note{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  list-style: none;
+  align-items: center;
+  z-index: 15;
+  animation-name: editNote;
+  animation-duration: 2s;
+  
+}
+.edit-note li{
+  margin: 30px 20px;
+  color: gray;
+}
+.edit-note li:hover{
+  background-color: #222222;
+  color: #FEFDFF;
+  cursor: pointer;
+
+}
+.edit-button-border{
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(0.25turn,#e66465, #9198e5) 1;
+
+}
+input[type="submit"]{
+  cursor: pointer;
+}
+/* @keyframes editNote{
+  0%   {transform: translate(-100px);}
+  25%  {}
+  50%  {}
+  100% {transform: translate(0);}
+} */

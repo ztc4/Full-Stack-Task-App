@@ -1,0 +1,351 @@
+#home-screen{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+#home-screen .page{
+    height: 100vh;
+    width: 100vw;
+    background-color: #343541;
+    color: #FEFFFF;
+    border-bottom: 3px dotted black;
+    
+
+}
+.intro-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.intro-page h1{
+    letter-spacing: 4px;
+    font-weight: 500;
+
+}
+.intro-page p{
+    letter-spacing: 3px;
+
+}
+.intro-page .title{
+    letter-spacing: 6px;
+    font-weight: 700;
+    text-decoration: dotted;
+}
+.intro-page img{
+    border: 0px;
+
+}
+.page-links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 8%;
+    justify-content: center;
+    margin: 40px 20px 0px 20px;
+}
+.page-button{
+    background-color:  #01C29A;
+    outline: none;
+    width: 120px;
+    height: 100%;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.448);
+
+}
+.page-button:hover{
+    background-color:  #029074;
+    
+    color: #222222;
+    transform: rotate(10deg);
+}
+#image-101{
+    height: 75%;
+    width: 60%;
+    background-color: red;
+    background-image: url(./images/task-image-2.png);
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.751);
+    filter: brightness(60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    
+}
+#animated-task-falling{
+
+    animation-name: task-falling;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 0px;
+    left: 5%;
+    height: 100px;
+    width: 100px;
+
+
+
+}
+@keyframes task-falling{
+    0%{
+       transform: rotate(30deg);
+       
+       
+
+    }
+    10%{
+        transform: rotate(300deg);
+        top: 10%;
+
+    }
+    30%{
+        transform: rotate(100deg);
+        top: 40%;
+
+    }
+    50%{
+        transform: rotate(440deg);
+        top: 10%;
+    }
+    70%{
+        transform: rotate(100deg);
+        top: 70%;
+
+    }
+    85%{
+        transform: rotate(200deg);
+        top: 90%;
+
+    }
+    100%{
+        transform: rotate(8000deg);
+        top: 110%;
+        
+
+
+    }
+
+}
+#animated-task-falling-2{
+
+    animation-name: task-falling;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 0px;
+    left: 90%;
+    height: 100px;
+    width: 100px;
+
+
+
+}
+
+#explanation-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    
+   
+
+   
+}
+#explanation-page .white-half{
+
+    max-inline-size: 300px;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  
+}
+#explanation-page .white-half h1{
+    font-weight:300;
+    letter-spacing: 4px;
+    text-indent: auto;
+    font-size: 30px;
+
+}
+#explanation-page .picture-half{
+    background-image: url(./images/explanation-image.png);
+   background-size: cover;
+   background-position: 0px -100px;
+   background-repeat: no-repeat;
+    border-radius: 20px;
+    filter: brightness(60%) ;
+   
+    
+
+}
+#explanation-page .half{
+    width: 30%;
+    height: 60%;
+    padding: 30px;
+    box-sizing: border-box;
+    /* background-color: #01C29A; */
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 20px;
+
+}
+/* #explanation-page .white-half{
+    width: 50%;
+    height: 100%;
+    max-inline-size: 400px;
+  
+    
+}
+#explanation-page .picture-half{
+   
+    background-size: cover;
+    width: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#explanation-image{
+    background-image: url(./images/task-image-2.png);
+    background-size: cover;
+    height: 50%;
+    width: 80%;
+    border-radius: 10px;
+
+} */
+.features-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#feature-image{
+    background-image: url(./images/note-book.png);
+    background-size: cover;
+    height: 100%;
+    width:100%;
+    border-radius: 20px;
+     
+
+}
+.features-page .white-half{
+    width: 30%;
+    height: 60%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.features-page .picture-half{
+    width: 30%;
+    height: 60%;
+    padding: 30px;
+    box-sizing: border-box;
+
+}
+.section-feature{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.page-headers{
+   /* align-self: center; */
+   font-weight: 400;
+   line-height: 20px;
+   letter-spacing: 4px;
+   font-size: 40px;
+   margin: 60px 0 0 0;
+
+
+}
+#feature-seperator{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    justify-content: center;
+    align-items: center;
+}
+#feature-seperator div{
+    height: 80%;
+    background-color: #222222;
+    width: 15px;
+    margin: none;
+    /* margin:  0 80px 0px 20px; */
+}
+#feature-seperator button{
+    background-color: #222222;
+    border: none;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: none;
+    position: relative;
+    top: 10px;
+    
+}
+#feature-seperator button:hover{
+ background-color: #333333;
+}
+#feature-seperator #group-seperator{
+    position: relative;
+    top: -20px;
+}
+#feature-seperator .feature-button-active{
+    animation-name: change-green;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    background-color: #029074;
+}
+@keyframes change-green {
+    0%{background-color: #222222;}
+    100%{background-color: #029074ed;}
+    
+}
+.section-feature .white-half{
+    line-height: 40px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-top: 8%;
+}
+
+/* #feature-seperator::after{
+    content: 'Personal';
+    height: 100px;
+    background-color: #222222;
+    width: 100px;
+    display:block;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    left: -40px;
+    font-size: 12px;
+    text-align: center;
+    margin: auto 0;
+    font-size: 16px;
+
+
+} */
