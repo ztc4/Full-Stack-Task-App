@@ -3,7 +3,7 @@ const cors = require("cors")
 const cookieParser = require("cookie-parser")
 //Connect to Database
 require("../db/mongoose")
-
+const port = process.env.PORT || 5000
 //Insert routes
 const UserRouter = require("../Routers/userRouter")
 const TaskRouter = require("../Routers/TaskRouter")
