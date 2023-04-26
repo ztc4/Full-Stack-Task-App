@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
+require('dotenv').config()
 //Connect to Database
 require("../db/mongoose")
 const port = process.env.PORT || 5000
@@ -19,7 +20,7 @@ application.use(TaskRouter)
 application.use(cookieParser())
 
 
-application.listen(5000, ()=> console.log("Application is up"))
+application.listen(port, ()=> console.log("Application is up"))
 
 
 // Login
