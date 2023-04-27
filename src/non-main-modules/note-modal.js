@@ -3,7 +3,7 @@ import { useNavigate } from "react-router"
 import getCookie from "../Functions/getCookies"
 import NoteGroups from "./noteGroupData"
 export default function CreateNoteModal({click}){
-
+    let localhost = "146.190.72.134" || "localhost"
     const navigate = useNavigate()
 
     const [note, setNote] = React.useState({
@@ -54,7 +54,7 @@ export default function CreateNoteModal({click}){
 
     const [groups,setGroups] = React.useState()
     async function getData(){
-        fetch("http://localhost:5000/group/get", {
+        fetch(`http://${localhost}:5000/group/get`, {
             method: "GET",
             
             headers: {
@@ -94,7 +94,7 @@ async function handleSubmit(event){
         return "User isn't logged in"
     }
         if(note.group === "" && note.type === "personal"){
-        fetch("http://localhost:5000/tasks/create", {
+        fetch(`http://${localhost}:5000/tasks/create`, {
             method: "POST",
             
             headers: {
@@ -110,7 +110,7 @@ async function handleSubmit(event){
         }
         else{
             console.log("Add Group fetch")
-            fetch("http://localhost:5000/group/createTask",{
+            fetch(`http://${localhost}:5000/group/createTask`,{
                 method: "POST",
                 headers:{
                     Accept: "application/json, text/plain, */*",

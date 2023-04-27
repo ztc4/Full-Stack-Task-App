@@ -29,13 +29,13 @@ const [page,setPage] = React.useState({page: "current"})
 
     }
 
-
+    let localhost = "146.190.72.134" || "localhost"
 //info sent to current
     const [info,setData] = React.useState("");
 
 //Get Data for current group
     async function getData(){
-        fetch("http://localhost:5000/group/get", {
+        fetch(`http://${localhost}:5000/group/get`, {
             method: "GET",
             
             headers: {

@@ -4,7 +4,7 @@ import getCookie from "./Functions/getCookies"
 import "./css/task.css"
 import { deleteModel } from "mongoose"
 export default function TaskCard({title,description,toggleTask,completion,due, dark, key, type, _id}){
-
+  let localhost = "146.190.72.134" || "localhost"
 const [localCompletion, setLocalCompletion] = React.useState(completion)
 const [deleted, setdeleted] = React.useState(false)
   // function runFunction(){
@@ -18,7 +18,7 @@ const [deleted, setdeleted] = React.useState(false)
 //     return date;
 // }
 async function markComplete(){
-  fetch(`http://localhost:5000/${type === "personal"? "tasks/markcomplete" : "group/markcomplete"}`,{
+  fetch(`http://${localhost}:5000/${type === "personal"? "tasks/markcomplete" : "group/markcomplete"}`,{
     method: "PUT",
 
     headers: {

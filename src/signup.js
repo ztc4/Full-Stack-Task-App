@@ -4,6 +4,7 @@ import React from "react"
 import {CiMail,CiLock,CiUser} from "react-icons/ci"
 import {Link, useNavigate} from "react-router-dom"
 export default function Signup(props){
+    let localhost = "146.190.72.134" || "localhost"
      const navigate = useNavigate()
         const [info,setInfo] = React.useState(
             {username: "", password: "", fname:"", lname: "", email:""})
@@ -22,7 +23,7 @@ export default function Signup(props){
        async function handleSubmit(event){
         event.preventDefault()
 
-       fetch("http://localhost:5000/user/signup", {
+       fetch(`http://${localhost}:5000/user/signup`, {
         method: "POST",
         
         headers: {

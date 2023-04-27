@@ -9,6 +9,7 @@ import EditModal from "./non-main-modules/edit-note-modal"
 import getCookie from "./Functions/getCookies"
 import{useLoaderData, useNavigate} from "react-router-dom"
 export default function LoggedIn({red}){
+    let localhost = "146.190.72.134" || "localhost"
     const navigate = useNavigate()
     //toggle modals
      const[noteActive,setNoteActive] = React.useState(false)
@@ -125,7 +126,7 @@ export default function LoggedIn({red}){
 
 //Logout
  async function logout(){
-    await fetch("http://localhost:5000/user/logout", {
+    await fetch(`http://${localhost}:5000/user/logout`, {
         method: "POST",
         
         headers: {

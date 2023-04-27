@@ -2,7 +2,7 @@
 import { redirect} from "react-router"
 
 export default async function getData(){
-   
+   let localhost = "146.190.72.134" || "localhost"
     function getCookie(name){
         let cookies = document.cookie
         cookies = cookies.split(";")
@@ -26,7 +26,7 @@ export default async function getData(){
     }
 
 
-    const tasks = await fetch("http://localhost:5000/tasks/get",{
+    const tasks = await fetch(`http://${localhost}:5000/tasks/get`,{
         method: "GET", 
         headers:{
             Authorization: `Bearer ${cookies}`
@@ -40,7 +40,7 @@ export default async function getData(){
     })
 
 
-     const groupTask =  await fetch("http://localhost:5000/group/getTask",{
+     const groupTask =  await fetch(`http://${localhost}:5000/group/getTask`,{
         method: "GET", 
         headers:{
             Authorization: `Bearer ${cookies}`

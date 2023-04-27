@@ -1,11 +1,12 @@
 import React from "react"
 import getCookie from "../Functions/getCookies"
 export default function EditNote({click, id, dark, title, type}){
-
+    let localhost = "146.190.72.134" || "localhost"
     const [task,setTask] = React.useState({_id: id,title: "", description: "",due: "",completion: "",type:"" })
     async function getTask(){
+        
         console.log("current id", id)
-            await fetch(`http://localhost:5000/${type == "personal"? "tasks/find": "groupTask/find"}`, {
+            await fetch(`http://${localhost}:5000/${type == "personal"? "tasks/find": "groupTask/find"}`, {
             method: "POST",
             
             headers: {
@@ -35,7 +36,7 @@ export default function EditNote({click, id, dark, title, type}){
              console.log(task)
     async function deleteTask(){
         console.log(console.log)
-        fetch(`http://localhost:5000/${task.type === "personal"? "tasks/delete" : "group/delete"}`,{
+        fetch(`http://${localhost}:5000/${task.type === "personal"? "tasks/delete" : "group/delete"}`,{
             method: "DELETE",
         
             headers: {
@@ -55,7 +56,7 @@ export default function EditNote({click, id, dark, title, type}){
         e.preventDefault()
         console.log(task.group)
         
-            fetch(`http://localhost:5000/${task.type === "personal"? "tasks/edit" : "group/edit"}`,{
+            fetch(`http://${localhost}:5000/${task.type === "personal"? "tasks/edit" : "group/edit"}`,{
                 method: "PUT",
             
                 headers: {

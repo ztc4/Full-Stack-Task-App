@@ -5,6 +5,7 @@ import { CiUser as User, CiLock as Password, CiLogin} from "react-icons/ci"
 
 import"./css/AccountForm.css"
 export default function Login(props){
+    let localhost = "146.190.72.134" || "localhost"
     const navigate = useNavigate()
         const [info,setInfo] = React.useState(
             {username: "", password: ""})
@@ -24,7 +25,7 @@ export default function Login(props){
         event.preventDefault()
         setError("")
 
-       fetch("http://localhost:5000/user/login", {
+       fetch(`http://${localhost}:5000/user/login`, {
         method: "POST",
         
         headers: {

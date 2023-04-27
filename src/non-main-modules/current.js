@@ -3,13 +3,14 @@ import getCookie from "../Functions/getCookies"
 import{ CiSquareMore} from "react-icons/ci"
 
 export default function Current({click, data, dark}){
+    let localhost = "146.190.72.134" || "localhost"
     const information = [...data]
     console.log(information)
     const[options,setMoreOptions] = React.useState({x: "",y:""})
 
     async function LeaveGroup(current){
         console.log("Leave Group")
-        fetch(`http://localhost:5000/groups/leave`,{
+        fetch(`http://${localhost}:5000/groups/leave`,{
             method: "DELETE",
         
             headers: {

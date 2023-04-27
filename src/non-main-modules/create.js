@@ -3,7 +3,7 @@ import { useNavigate } from "react-router"
 import getCookie from "../Functions/getCookies"
 export default function Create({click,dark}){
     const navigate = useNavigate()
-
+    let localhost = "146.190.72.134" || "localhost"
     const [create,setCreate] = React.useState({
         groupName:"",groupPassword: ""
      })
@@ -25,7 +25,7 @@ export default function Create({click,dark}){
             return "User isn't logged in"
         }
 
-    fetch("http://localhost:5000/group/create", {
+    fetch(`http://${localhost}:5000/group/create`, {
         method: "POST",
         
         headers: {

@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node Backend/Server/MainServer.js",
+    "server": "nodemon /Backend/Server/MainServer.js",
     "react": " npm start src/index.js"
   },
   "eslintConfig": {

@@ -3,7 +3,7 @@ import getCookie from "../Functions/getCookies"
 import { useNavigate } from "react-router-dom"
 export default function Join({click, dark}){
     const navigate = useNavigate()
-
+    let localhost = "146.190.72.134" || "localhost"
 
     //State
 
@@ -41,7 +41,7 @@ console.log(error)
             return "User isn't logged in"
         }
 
-    fetch("http://localhost:5000//group/join", {
+    fetch(`http://${localhost}:5000//group/join`, {
         method: "POST",
         
         headers: {
