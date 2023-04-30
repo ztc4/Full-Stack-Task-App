@@ -23,7 +23,7 @@ application.use(cookieParser())
 application.listen(port, ()=> console.log("Application is up"))
 
 
-// Login
+//Check if server is up
 application.get("/home", async(req, res)=>{
 
  res.cookie("zachary", "mekemdmdemeo").send("Page sent")
